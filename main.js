@@ -228,15 +228,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   // ==========================================
-  // 5. Waitlist Newsletter Form Validation
+  // 5. Waitlist Newsletter Form Validation & Supabase Integration
   // ==========================================
+  // Llave API pública "anon" de Supabase
+  const SUPABASE_ANON_KEY = 'sb_publishable_ZcGwydJLGSzoS-8Hw0mfcQ_nqzXVSxP';
+  const SUPABASE_URL = 'https://xwwcjmrbjibqagilnyaz.supabase.co/rest/v1/waitlist';
+
   const waitlistForm = document.getElementById('waitlist-form');
   const waitlistSuccess = document.getElementById('waitlist-success');
   const feedbackMsg = document.getElementById('form-feedback');
   const emailInput = document.getElementById('waitlist-email');
+  const submitBtn = document.getElementById('submit-waitlist-btn');
 
   if (waitlistForm) {
-    waitlistForm.addEventListener('submit', (e) => {
+    waitlistForm.addEventListener('submit', async (e) => {
       e.preventDefault();
       
       const emailValue = emailInput.value.trim();
@@ -257,10 +262,45 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      // If valid, trigger success feedback animation
-      waitlistForm.classList.add('hidden');
-      waitlistSuccess.classList.remove('hidden');
-      waitlistSuccess.style.animation = 'fadeIn 0.5s ease-out forwards';
+      // Deshabilitar botón y mostrar estado de carga
+      submitBtn.disabled = true;
+      const originalBtnText = submitBtn.textContent;
+      submitBtn.textContent = 'Enviando...';
+
+      try {
+        if (SUPABASE_ANON_KEY === 'YOUR_SUPABASE_ANON_KEY') {
+          throw new Error('La llave pública "anon" de Supabase no está configurada. Por favor edita main.js para agregarla.');
+        }
+
+        const response = await fetch(SUPABASE_URL, {
+          method: 'POST',
+          headers: {
+            'apikey': SUPABASE_ANON_KEY,
+            'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+            'Content-Type': 'application/json',
+            'Prefer': 'return=minimal'
+          },
+          body: JSON.stringify({ email: emailValue })
+        });
+
+        if (!response.ok) {
+          // Si es 409, significa que el correo ya existe (llave única en Supabase)
+          if (response.status === 409) {
+            throw new Error('Este correo ya está registrado en la lista de espera.');
+          }
+          throw new Error('Ocurrió un error al registrar tu correo. Intenta de nuevo.');
+        }
+
+        // Mostrar estado de éxito
+        waitlistForm.classList.add('hidden');
+        waitlistSuccess.classList.remove('hidden');
+        waitlistSuccess.style.animation = 'fadeIn 0.5s ease-out forwards';
+      } catch (err) {
+        feedbackMsg.textContent = err.message;
+        feedbackMsg.classList.add('error');
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalBtnText;
+      }
     });
   }
 });
