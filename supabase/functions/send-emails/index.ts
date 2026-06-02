@@ -23,7 +23,7 @@ serve(async (req) => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        from: "Azurita Play <onboarding@resend.dev>", // Nota: Utiliza el dominio verificado si ya configuraste uno en Resend
+        from: "Azurita Play <hola@azuritaplay.com>",
         to: email,
         subject: "¡Te damos la bienvenida a la familia Azurita Play! 🧸",
         html: `
@@ -84,7 +84,7 @@ serve(async (req) => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        from: "Alertas Azurita Play <onboarding@resend.dev>",
+        from: "Alertas Azurita Play <alertas@azuritaplay.com>",
         to: ADMIN_EMAIL,
         subject: "🔔 Nuevo registro en la lista de espera - Azurita Play",
         html: `
