@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Azurita Play ofrece juguetes Montessori de madera premium, diseñados en México. Conecta a las familias con sus raíces a través de momentos de juego significativos.">
+  <title>Azurita Play | Juguetes Montessori de Madera Premium</title>
+  
+  <!-- Preconnect and Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- 1. Sticky Navbar -->
+  <header class="navbar-wrapper" id="main-header">
+    <div class="container navbar-container">
+      <a href="#" class="logo-link" id="nav-logo">
+        <img src="assets/axolotl_logo.png" alt="Azurita Play Logo" class="logo-img">
+        <span class="logo-text">AZURITA PLAY</span>
+      </a>
+      
+      <nav class="nav-menu" id="nav-links">
+        <a href="#age-grid" class="nav-item">Comprar por Edad</a>
+        <a href="#philosophy" class="nav-item">Nuestra Filosofía</a>
+        <a href="#dashboard-preview" class="nav-item">Panel de Hitos</a>
+      </nav>
+      
+      <div class="nav-actions">
+        <button class="cart-btn" id="cart-button" aria-label="Ver Carrito">
+          <svg class="cart-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+          </svg>
+          <span class="cart-badge" id="cart-count">0</span>
+        </button>
+        <button class="mobile-menu-toggle" id="menu-toggle" aria-label="Abrir Menú">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- 2. Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <span class="hero-badge">Montessori Hecho en México</span>
+          <h1 class="hero-title">Momentos de juego significativos que conecten a las familias con sus raíces</h1>
+          <p class="hero-description">
+            Creado para nutrir el desarrollo natural de tu bebé. Juguetes de madera premium inspirados en hitos de crecimiento y en el rico legado cultural mexicano.
+          </p>
+          <div class="hero-actions">
+            <a href="#age-grid" class="btn btn-primary" id="hero-cta-btn">Explorar por Edad</a>
+            <a href="#philosophy" class="btn btn-secondary">Conocer Más</a>
+          </div>
+        </div>
+        <div class="hero-media">
+          <div class="hero-image-bg"></div>
+          <img src="assets/wooden_toy_box.png" alt="Caja de juguetes Montessori Azurita Play" class="hero-img animate-float">
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Age Category Grid -->
+    <section class="age-grid-section" id="age-grid">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2 class="section-title">Elige la etapa de tu bebé</h2>
+          <p class="section-subtitle">Nuestras cajas están personalizadas para cada momento clave del neurodesarrollo</p>
+        </div>
+        
+        <div class="age-cards-grid">
+          <!-- Card 1: 0-3 Meses -->
+          <div class="age-card card-terracotta" id="age-card-0-3" data-age="0-3">
+            <div class="age-card-icon">
+              <!-- Visual Sensory Icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+              </svg>
+            </div>
+            <div class="age-card-content">
+              <span class="age-tag">0 - 3 Meses</span>
+              <h3 class="age-title">Caja Despertar</h3>
+              <p class="age-desc">Fomenta el enfoque visual, la exploración sensorial táctil y la conexión inicial a través de contrastes.</p>
+              <span class="age-link-btn">Ver Detalles &rarr;</span>
+            </div>
+          </div>
+          
+          <!-- Card 2: 3-6 Meses -->
+          <div class="age-card card-mustard" id="age-card-3-6" data-age="3-6">
+            <div class="age-card-icon">
+              <!-- Reaching Icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <div class="age-card-content">
+              <span class="age-tag">3 - 6 Meses</span>
+              <h3 class="age-title">Caja Exploración</h3>
+              <p class="age-desc">Ayuda a alcanzar objetos, pasar juguetes de una mano a otra y descubrir el sonido y la causa-efecto.</p>
+              <span class="age-link-btn">Ver Detalles &rarr;</span>
+            </div>
+          </div>
+          
+          <!-- Card 3: 6-12 Meses -->
+          <div class="age-card card-cactus" id="age-card-6-12" data-age="6-12">
+            <div class="age-card-icon">
+              <!-- Sitting/Coordination Icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4.5v15m7.5-7.5h-15" />
+              </svg>
+            </div>
+            <div class="age-card-content">
+              <span class="age-tag">6 - 12 Meses</span>
+              <h3 class="age-title">Caja Coordinación</h3>
+              <p class="age-desc">Promueve la motricidad fina, la permanencia de objetos, el gateo y la coordinación bimanual activa.</p>
+              <span class="age-link-btn">Ver Detalles &rarr;</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Value Prop Showcase -->
+    <section class="philosophy-section" id="philosophy">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2 class="section-title">Nuestra Filosofía</h2>
+          <p class="section-subtitle">Por qué las familias eligen Azurita Play para guiar el juego de sus pequeños</p>
+        </div>
+        
+        <div class="value-props">
+          <!-- Row 1: Premium Local Wood -->
+          <div class="value-row">
+            <div class="value-img-placeholder row-accent-terracotta">
+              <svg class="value-illustration" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="100" cy="100" r="80" fill="#C85A32" fill-opacity="0.1"/>
+                <path d="M100 40C120 70 120 110 100 150C80 110 80 70 100 40Z" fill="#C85A32"/>
+                <path d="M100 70C110 90 110 110 100 130C90 110 90 90 100 70Z" fill="#E3A82D"/>
+                <line x1="100" y1="40" x2="100" y2="150" stroke="#F5EFEB" stroke-width="3"/>
+              </svg>
+            </div>
+            <div class="value-text">
+              <span class="value-badge badge-terracotta">Sustentable</span>
+              <h3>Madera Local de Alta Calidad</h3>
+              <p>
+                Cada juguete es tallado a mano por artesanos mexicanos utilizando maderas duras certificadas y provenientes de bosques sustentables de la región. La calidez y peso de la madera real proporciona una retroalimentación sensorial inigualable para tu bebé.
+              </p>
+            </div>
+          </div>
+          
+          <!-- Row 2: Non-Toxic Certification -->
+          <div class="value-row row-reverse">
+            <div class="value-img-placeholder row-accent-mustard">
+              <svg class="value-illustration" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="100" cy="100" r="80" fill="#E3A82D" fill-opacity="0.1"/>
+                <path d="M100 50L135 125H65L100 50Z" stroke="#E3A82D" stroke-width="8" stroke-linejoin="round"/>
+                <circle cx="100" cy="98" r="10" fill="#004B87"/>
+              </svg>
+            </div>
+            <div class="value-text">
+              <span class="value-badge badge-mustard">Seguridad Certificada</span>
+              <h3>Certificación No Tóxica</h3>
+              <p>
+                La seguridad de tu hijo es lo primero. Usamos exclusivamente selladores orgánicos a base de cera de abeja y pinturas de base acuosa no tóxicas, libres de metales pesados y plomo. Totalmente seguro si tu bebé se lo lleva a la boca.
+              </p>
+            </div>
+          </div>
+          
+          <!-- Row 3: Reusable Box -->
+          <div class="value-row">
+            <div class="value-img-placeholder row-accent-cactus">
+              <svg class="value-illustration" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="100" cy="100" r="80" fill="#2E6F40" fill-opacity="0.1"/>
+                <rect x="60" y="70" width="80" height="70" rx="8" stroke="#2E6F40" stroke-width="8"/>
+                <path d="M50 70L100 40L150 70" stroke="#2E6F40" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="value-text">
+              <span class="value-badge badge-cactus">Zero Waste</span>
+              <h3>Caja Reutilizable y Educativa</h3>
+              <p>
+                Olvídate del plástico de un solo uso. Nuestro embalaje es una robusta caja de madera diseñada para ser parte del juego: sirve para ordenar, clasificar figuras o como un hermoso contenedor permanente en el cuarto de juegos.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Gamified Digital Dashboard Preview -->
+    <section class="dashboard-section" id="dashboard-preview">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2 class="section-title">Tu Guía de Crecimiento</h2>
+          <p class="section-subtitle">Cada caja viene con acceso a nuestro panel digital interactivo para seguir los hitos del neurodesarrollo</p>
+        </div>
+        
+        <div class="dashboard-preview-card">
+          <!-- Dashboard Control Header -->
+          <div class="dashboard-controls">
+            <span class="control-label">Elige la edad de tu bebé para simular el panel:</span>
+            <div class="toggle-btn-group" role="tablist">
+              <button class="toggle-tab active" data-target="0-3" role="tab" aria-selected="true" id="tab-0-3">0-3m</button>
+              <button class="toggle-tab" data-target="3-6" role="tab" aria-selected="false" id="tab-3-6">3-6m</button>
+              <button class="toggle-tab" data-target="6-12" role="tab" aria-selected="false" id="tab-6-12">6-12m</button>
+            </div>
+          </div>
+          
+          <div class="dashboard-display">
+            <!-- Left Panel: Milestone Map -->
+            <div class="milestone-map-panel">
+              <div class="panel-header">
+                <span class="panel-title-text">Mapa de Hitos de Desarrollo</span>
+                <span class="badge-status-online">En Vivo</span>
+              </div>
+              
+              <div class="milestone-graphic-container">
+                <!-- Soft Cloud Elements -->
+                <div class="dashboard-cloud cloud-1 animate-float"></div>
+                <div class="dashboard-cloud cloud-2 animate-float-delay"></div>
+                
+                <!-- SVG path representing progress -->
+                <svg class="milestone-path-svg" viewBox="0 0 400 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Dotted curved path -->
+                  <path d="M 50 150 Q 120 40 200 100 T 350 50" stroke="#004B87" stroke-width="4" stroke-dasharray="8 8" class="path-bg"/>
+                  <path d="M 50 150 Q 120 40 200 100 T 350 50" stroke="#E3A82D" stroke-width="4" class="path-progress" id="milestone-progress-line"/>
+                </svg>
+                
+                <!-- Path Node Markers -->
+                <div class="milestone-node node-1 active" id="node-0-3" style="left: 12.5%; top: 75%;">
+                  <div class="node-circle"></div>
+                  <span class="node-label">Foco Visual</span>
+                </div>
+                <div class="milestone-node" id="node-3-6" style="left: 50%; top: 50%;">
+                  <div class="node-circle"></div>
+                  <span class="node-label">Agarre</span>
+                </div>
+                <div class="milestone-node" id="node-6-12" style="left: 87.5%; top: 25%;">
+                  <div class="node-circle"></div>
+                  <span class="node-label">Permanencia</span>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Right Panel: Interactive Checklist Widget -->
+            <div class="milestone-checklist-panel">
+              <div class="panel-header">
+                <span class="panel-title-text">Típicamente, a esta edad...</span>
+              </div>
+              
+              <div class="checklist-content">
+                <p class="checklist-intro" id="checklist-intro-text">Hitos claves de desarrollo para la etapa de 0 a 3 meses:</p>
+                <ul class="checklist-items" id="checklist-items-container">
+                  <!-- JS will dynamically inject items here -->
+                  <li class="checklist-item">
+                    <label class="custom-checkbox">
+                      <input type="checkbox" checked>
+                      <span class="checkmark"></span>
+                      <span class="item-text">Sigue objetos en movimiento con la mirada y enfoca contrastes en blanco y negro.</span>
+                    </label>
+                  </li>
+                  <li class="checklist-item">
+                    <label class="custom-checkbox">
+                      <input type="checkbox" checked>
+                      <span class="checkmark"></span>
+                      <span class="item-text">Abre y cierra las manos, llevándoselas gradualmente a la boca.</span>
+                    </label>
+                  </li>
+                  <li class="checklist-item">
+                    <label class="custom-checkbox">
+                      <input type="checkbox">
+                      <span class="checkmark"></span>
+                      <span class="item-text">Levanta la cabeza brevemente cuando está boca abajo (tummy time).</span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+              
+              <div class="checklist-footer">
+                <div class="progress-bar-container">
+                  <div class="progress-bar-fill" id="checklist-progress" style="width: 66%;"></div>
+                </div>
+                <span class="progress-percentage-text" id="progress-percent-label">66% Completado</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Social Proof Carousel -->
+    <section class="reviews-section" id="reviews">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2 class="section-title">Familias Felices</h2>
+          <p class="section-subtitle">Lo que padres y educadores opinan de la experiencia Azurita Play</p>
+        </div>
+        
+        <div class="reviews-carousel-wrapper">
+          <div class="reviews-grid" id="reviews-slider">
+            <!-- Review Card 1 -->
+            <div class="review-card">
+              <div class="review-rating">
+                <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <span class="verified-badge">Compra Verificada</span>
+              </div>
+              <p class="review-text">"La calidad de la madera es excepcional. A mi bebé de 4 meses le encanta la sonaja y el rodillo. Se nota que están hechos con amor."</p>
+              <div class="review-author">
+                <div class="author-avatar row-accent-terracotta">SM</div>
+                <div class="author-info">
+                  <span class="author-name">Sofía M.</span>
+                  <span class="author-location">Ciudad de México</span>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Review Card 2 -->
+            <div class="review-card">
+              <div class="review-rating">
+                <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <span class="verified-badge">Compra Verificada</span>
+              </div>
+              <p class="review-text">"El panel de hitos nos ha guiado muchísimo como papás primerizos. Los juguetes de la caja de 6-12 meses son hermosos y seguros."</p>
+              <div class="review-author">
+                <div class="author-avatar row-accent-mustard">AR</div>
+                <div class="author-info">
+                  <span class="author-name">Alejandro R.</span>
+                  <span class="author-location">Guadalajara</span>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Review Card 3 -->
+            <div class="review-card">
+              <div class="review-rating">
+                <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <span class="verified-badge">Compra Verificada</span>
+              </div>
+              <p class="review-text">"Increíble concepto. Un diseño minimalista hermoso y súper resistente. El hecho de que la caja de empaque sea reutilizable es fantástico."</p>
+              <div class="review-author">
+                <div class="author-avatar row-accent-cactus">VP</div>
+                <div class="author-info">
+                  <span class="author-name">Valeria P.</span>
+                  <span class="author-location">Monterrey</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Carousel Navigation Dots -->
+          <div class="carousel-dots">
+            <span class="dot active" data-index="0"></span>
+            <span class="dot" data-index="1"></span>
+            <span class="dot" data-index="2"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 7. Footer -->
+  <footer class="footer" id="footer">
+    <div class="container footer-container">
+      
+      <!-- Newsletter Waitlist Form -->
+      <div class="footer-newsletter">
+        <h3 class="newsletter-title">Únete a la lista de espera</h3>
+        <p class="newsletter-desc">Recibe un 15% de descuento en tu primera caja y entérate antes que nadie de nuestros lanzamientos.</p>
+        
+        <form class="newsletter-form" id="waitlist-form" novalidate>
+          <div class="form-group">
+            <input type="email" class="form-input" id="waitlist-email" placeholder="Tu correo electrónico" required aria-label="Ingresa tu correo electrónico">
+            <button type="submit" class="btn btn-terracotta" id="submit-waitlist-btn">Unirme</button>
+          </div>
+          <span class="form-feedback-message" id="form-feedback"></span>
+        </form>
+        
+        <!-- Waitlist Success State (hidden initially) -->
+        <div class="newsletter-success hidden" id="waitlist-success">
+          <div class="success-icon-container">
+            <svg class="success-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+            </svg>
+          </div>
+          <h4>¡Te has registrado con éxito!</h4>
+          <p>Hemos enviado un cupón de 15% de descuento a tu correo.</p>
+        </div>
+      </div>
+      
+      <!-- Middle Footer Info Grid -->
+      <div class="footer-info-grid">
+        <div class="footer-brand-info">
+          <a href="#" class="logo-link logo-footer">
+            <img src="assets/axolotl_logo.png" alt="Azurita Play Logo" class="logo-img">
+            <span class="logo-text">AZURITA PLAY</span>
+          </a>
+          <p class="brand-pitch">Juguetes de madera premium con alma mexicana, diseñados bajo la filosofía Montessori para nutrir el juego libre y creativo.</p>
+        </div>
+        
+        <div class="footer-links-col">
+          <span class="col-title">Explorar</span>
+          <ul class="footer-links-list">
+            <li><a href="#age-grid">Comprar por Edad</a></li>
+            <li><a href="#philosophy">Nuestra Filosofía</a></li>
+            <li><a href="#dashboard-preview">Panel de Hitos</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links-col">
+          <span class="col-title">Ayuda & Políticas</span>
+          <ul class="footer-links-list">
+            <li><a href="#">Preguntas Frecuentes</a></li>
+            <li><a href="#">Políticas de Envío</a></li>
+            <li><a href="#">Términos y Condiciones</a></li>
+            <li><a href="#">Aviso de Privacidad</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <hr class="footer-divider">
+      
+      <!-- Bottom Footer: Trust Badges and copyright -->
+      <div class="footer-bottom">
+        <p class="copyright">&copy; 2026 Azurita Play. Todos los derechos reservados. Hecho con amor en México.</p>
+        <div class="trust-badges">
+          <span class="trust-badge">100% Madera Certificada</span>
+          <span class="trust-badge">Pinturas Libres de Plomo</span>
+          <span class="trust-badge">Envíos a todo México</span>
+        </div>
+      </div>
+      
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
